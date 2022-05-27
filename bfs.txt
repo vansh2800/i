@@ -1,0 +1,16 @@
+graph={0:[1,2,3],1:[0],2:[0,4],3:[0],4:[2]}
+
+visited=[]
+queue=[]
+def bfs(visited,graph,root):
+        visited.append(root)
+        queue.append(root)
+        while queue:
+            m=queue.pop(0)
+            print(m,end=" ")
+            for n in graph[m]:
+                if n not in visited:
+                    visited.append(n)
+                    queue.append(n)
+
+bfs(visited,graph,0)

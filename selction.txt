@@ -1,0 +1,16 @@
+def sort(no):
+    for i in range(5):
+        min=i
+        for j in range(i,6):
+             if no[j]<no[min]:
+                min=j
+
+        temp=no[i]
+        no[i]=no[min]
+        no[min]=temp
+        # print(no)
+
+
+no=[5,3,8,6,7,2]
+sort(no)
+print(no)

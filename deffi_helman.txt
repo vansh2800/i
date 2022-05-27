@@ -1,0 +1,19 @@
+p=int(input("prime no1: "))
+q=int(input("prime no2: "))
+
+
+xa=int(input("1 private key:"))
+xb=int(input("2 private key:"))
+
+ya=p**xa%q
+yb=p**xb%q
+
+ka= yb**xa%q
+kb= ya**xb%q
+
+
+
+if (ka==kb):
+    print("both have same exchange key:")
+    print(ka)
+    print(kb)

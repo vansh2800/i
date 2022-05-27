@@ -1,0 +1,18 @@
+message=input("enter message:")
+alphabet="abcdefghijklmnopqrstuvwxyz"
+key=5
+enc=""
+for i in message:
+    position=alphabet.find(i)
+    newpostion=(position+key)%26
+    enc+=alphabet[newpostion]
+
+print(enc)
+
+dec=""
+for j in enc:
+    position2=alphabet.find(j)
+    newpostion2=(position2-key)%26
+    dec+=alphabet[newpostion2]
+
+print(dec)

@@ -1,0 +1,21 @@
+
+p=int(input("enter1 no:"))
+q=int(input("enter2 no:"))
+m=int(input("enter message:"))
+
+n=p*q
+fin=(p-1)*(q-1)
+# print(fin)
+
+e=int(input(f"choose no between 1 and {fin}:"))
+
+d=e-(1%fin)
+
+public=(e,n)
+private=(d,n)
+
+enc=(m**e)%n
+dec=(enc**d)%n
+
+print(enc)
+print(dec)
